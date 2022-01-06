@@ -3,6 +3,8 @@
 
 .root {
   overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .alias {

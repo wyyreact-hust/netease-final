@@ -25,25 +25,6 @@ const MusicList: React.FC<IProps> = ({ data, onPlayAll }) => {
 
   const columns: IColumn<IMusic, keyof IMusic>[] = [
     {
-      title: '',
-      key: 'name',
-      width: '80px',
-      render: (name: string, record: IMusic, index?: number) => {
-        return (
-          <div className={styles.operations}>
-            {state.musicId === record.id ? (
-              <span className={styles.isPlaying}>
-                <Icon icon={audioInfo.state?.paused ? 'volume-off' : 'volume-up'} iconSize={14} />
-              </span>
-            ) : (
-              <span className={styles.index}>{(index || 0) + 1}</span>
-            )}
-            <Icon icon='import' iconSize={14} />
-          </div>
-        )
-      },
-    },
-    {
       title: '音乐标题',
       key: 'name',
       width: '45%',
