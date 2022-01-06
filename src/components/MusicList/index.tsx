@@ -105,7 +105,7 @@ const MusicList: React.FC<IProps> = ({ data, onPlayAll }) => {
   const checkIsRecordRowDisabled = (record: IMusic) => record.status === MUSIC_STATUS.NOT_FOUND
 
   return (
-    <div>
+    <div className={styles.root}>
       <Table<IMusic>
         columns={columns}
         data={data}

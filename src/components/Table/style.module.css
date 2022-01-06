@@ -3,6 +3,7 @@
 
 .root {
   font-size: 0.9em;
+  overflow-x: hidden;
 }
 
 .header {

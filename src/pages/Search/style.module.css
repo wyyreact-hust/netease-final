@@ -47,6 +47,7 @@
 .content {
   height: calc(100% - 96px);
   overflow: scroll;
+  overflow-x: hidden;
 
   .spinner {
     margin-top: 100px;

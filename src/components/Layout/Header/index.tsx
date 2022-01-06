@@ -27,24 +27,14 @@ const Header = () => {
   return (
     <div className={styles.root}>
       <div className={styles.actions}>
-        <div className={styles.iconsWrap}>
-          {showLyric && (
-            <div className={styles.down} onClick={hideLyric}>
-              <Icon icon='chevron-down' iconSize={20} />
-            </div>
-          )}
-        </div>
-
-        {!showLyric && (
-          <div className={styles.backForward}>
-            <div onClick={handleGoBack}>
-              <Icon icon='chevron-left' color='white' />
-            </div>
-            <div onClick={handleGoForward}>
-              <Icon icon='chevron-right' color='white' />
-            </div>
+        <div className={styles.backForward}>
+          <div onClick={handleGoBack}>
+            <Icon icon='chevron-left' color='white' />
           </div>
-        )}
+          <div onClick={handleGoForward}>
+            <Icon icon='chevron-right' color='white' />
+          </div>
+        </div>
       </div>
 
       <div className={styles.content}>

@@ -1,6 +1,10 @@
 @value colors: '~styles/colors.module.css';
 @value tipsColor, tipsHoverColor, red from colors;
 
+.root {
+  overflow-x: hidden;
+}
+
 .alias {
   margin-top: 10px;
   color: tipsColor;
