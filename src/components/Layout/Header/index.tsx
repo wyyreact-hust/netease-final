@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { Icon } from '@blueprintjs/core'
-
+import UserMenu from './UserMenu'
 import Navbar from './Navbar'
 import Searcher from './Searcher'
 import { PlayMusicStateContext, PlayMusicDispatchContext, ACTIONS } from 'reducers/playMusic'
@@ -41,6 +41,7 @@ const Header = () => {
         <div>{!showLyric && <Navbar />}</div>
         <div className={styles.operations}>
           <Searcher />
+          <UserMenu />
         </div>
       </div>
     </div>

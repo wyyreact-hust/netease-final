@@ -1,5 +1,4 @@
 import axios, { AxiosRequestConfig, ResponseType, AxiosInstance } from 'axios'
-import { message as toaster } from '@mui/Notification'
 import { SERVER } from 'constants/server'
 
 const TIMEOUT = 40000
@@ -32,7 +31,7 @@ const handleError = (error: any) => {
 const toastError = (error: any) => {
   const { response, message } = error
   console.error(error)
-  toaster.error(response?.data?.message || message)
+  // toaster.error(response?.data?.message || message)
   return Promise.reject(error)
 }
 

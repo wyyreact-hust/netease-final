@@ -52,4 +52,8 @@
   display: flex;
   align-items: center;
   margin-right: 80px;
+
+  .login {
+    font-size: 14px;
+  }
 }

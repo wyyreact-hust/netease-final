@@ -21,9 +21,6 @@ export default (env, argv) => {
     resolve: {
       extensions: ['.tsx', '.ts', '.jsx', '.js'],
       modules: [path.resolve(rootPath, 'src'), 'node_modules'],
-      alias: {
-        '@mui': path.resolve(rootPath, 'node_modules/@uniquemo/mui/esm/components'),
-      },
     },
     module: {
       rules: [

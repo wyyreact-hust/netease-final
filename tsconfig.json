@@ -11,9 +11,6 @@
     "noImplicitThis": false,
     "moduleResolution": "node",
     "baseUrl": "src",
-    "paths": {
-      "@mui/*": ["../node_modules/@uniquemo/mui/esm/components/*"]
-    },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   }
