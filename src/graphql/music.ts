@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-//用于在未登录的情况下获取歌单
+//用于在未登录的情况下获取歌单 但部署后不可跨域
 export const getSonglistDetail = gql`
   query GetSonglistDetail($id: String!) {
     getSonglistDetail(id: $id) {
