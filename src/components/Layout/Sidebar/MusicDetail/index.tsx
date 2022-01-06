@@ -38,7 +38,7 @@ const MusicDetail = () => {
             <div className={styles.cdWrap}>
               <div className={styles.cd}>
                 <div className={styles.bar}>
-                  <img src={playBar} className={cn(styles.playBar, !isPlaying && styles.pause)} />
+                  <img src={playBar} className={cn(styles.playBar, !isPlaying && styles.pause, isPlaying && styles.playing)} />
                   <img src={playCd} className={styles.playCd} />
                 </div>
                 <div className={styles.circle}>
@@ -64,22 +64,6 @@ const MusicDetail = () => {
           <div className={styles.relatedInfo}>
             <div className={styles.comment}>
               <Comments />
-            </div>
-            <div className={styles.relatedDetail}>
-              {songlistState.loading || simiSongState.loading ? (
-                <Spinner size={Spinner.SIZE_SMALL} />
-              ) : (
-                <>
-                  {!!songlistState.value?.length && (
-                    <div className={styles.block}>
-
-                    </div>
-                  )}
-                  <div className={styles.block}>
-
-                  </div>
-                </>
-              )}
             </div>
           </div>
         </>

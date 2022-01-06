@@ -146,26 +146,12 @@
 .relatedInfo {
   display: flex;
   justify-content: space-between;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 8%;
+  padding-right: 8%;
 
   .comment {
     flex: 1;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .relatedDetail {
-    width: 300px;
-
-    .block {
-      margin-bottom: 35px;
-
-      .title {
-        padding-bottom: 15px;
-        font-size: 1.1em;
-        font-weight: bold;
-      }
-    }
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
