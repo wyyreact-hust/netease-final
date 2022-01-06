@@ -18,7 +18,6 @@ import ROUTES from 'constants/routes'
 const { useReducer, useMemo, useCallback, lazy, Suspense } = React
 
 const Discovery = lazy(() => import('./Discovery'))
-const Videos = lazy(() => import('./Videos'))
 const Search = lazy(() => import('./Search'))
 const SonglistDetail = lazy(() => import('./SonglistDetail'))
 
@@ -101,7 +100,6 @@ const App = () => {
                   <Suspense fallback={null}>
                     <Switch>
                       <Route path={ROUTES.DISCOVERY} component={Discovery} />
-                      <Route path={ROUTES.VIDEOS} component={Videos} />
                       <Route exact path={ROUTES.SEARCH} component={Search} />
                       <Route exact path={ROUTES.SONG_LIST_DETAIL} component={SonglistDetail} />
                       <Redirect from={ROUTES.ROOT} to={ROUTES.DEFAULT_ROUTE} />

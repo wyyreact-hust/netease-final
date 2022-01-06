@@ -23,8 +23,6 @@
       "@babel/plugin-transform-runtime"
     ]
   },
-  "license": "ISC",
-  "homepage": "https://wyyreact-hust.github.io/netease-react/",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
