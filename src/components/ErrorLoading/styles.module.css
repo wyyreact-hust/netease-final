@@ -1,0 +1,22 @@
+.root {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.box1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+
+  img {
+    width: 400px;
+  }
+}
+
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
