@@ -89,7 +89,7 @@ const App = () => {
   }, [musicId, playMode, audioControls, playList])
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <LogDispatchContext.Provider value={logDispath}>
         <LogStateContext.Provider value={logState}>
           <PlayMusicDispatchContext.Provider value={dispatch}>
@@ -111,7 +111,7 @@ const App = () => {
           </PlayMusicDispatchContext.Provider>
         </LogStateContext.Provider>
       </LogDispatchContext.Provider>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

@@ -47,23 +47,18 @@ const Comments = () => {
     })
   }
 
-  const handleLikeChange = async (comment: IComment, isHot: boolean) => {
+  const handleLikeChange = (comment: IComment, isHot: boolean) => {
     const comments = (isHot ? result?.hotComments : result?.comments) || []
     const { commentId, liked } = comment
     const cm = comments.find(({ commentId: cid }) => cid === commentId) as IComment
 
     if (liked) {
-      await unlikeCommentFn({ id: musicId, commentId }, () => {
-        cm.liked = false
-        cm.likedCount -= 1
-      })
+      cm.liked = false
+      cm.likedCount -= 1
       return
     }
-
-    await likeCommentFn({ id: musicId, commentId }, () => {
-      cm.liked = true
-      cm.likedCount += 1
-    })
+    cm.liked = true
+    cm.likedCount += 1
   }
 
   return (

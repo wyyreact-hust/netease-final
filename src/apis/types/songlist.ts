@@ -40,9 +40,9 @@ export interface ISongAllList {
 }
 
 export interface IGetSongListInfoRequest {
-  id: number
+  id: string
 }
 
 export interface IGetSongAllListRequest extends IGetSongListInfoRequest {
-  limit?: number
+  limit?: string
 }

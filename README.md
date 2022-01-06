@@ -8,6 +8,8 @@ This project is a highly imitation of Netease Music Player based on React, TypeS
 - Typescript
 - Webpack
 
+### 注意：推荐Clone到本地后启动，直接使用在线网站可能无法读取歌单
+
 Active Page: [Netease Music Player](https://netease-final.vercel.app/)
 
 ## Table of Contents

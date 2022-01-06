@@ -6,15 +6,18 @@ import useAsyncFn from 'hooks/useAsyncFn'
 import songlistApis from 'apis/songlist'
 import styles from './styles.module.css'
 import LoginDialog from 'components/LoginDialog'
+import { useHistory } from 'react-router-dom'
+import ROUTES from 'constants/routes'
 
 const UserMenu = () => {
+  const history = useHistory()
+
   const [showLoginDialog, setShowLoginDialog] = useState(false)
   const dispatch = useContext(LogDispatchContext)
   const loginState = useContext(LogStateContext)
   const { isLogined: isLogin, user } = loginState
   const [, logoutFn] = useAsyncFn(authApis.logout)
   const [songlistState, getUserSonglistFn] = useAsyncFn(songlistApis.getUserSonglist)
-
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
 
   useEffect(() => {
@@ -37,14 +40,17 @@ const UserMenu = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null)
   }
-  const handleGo2UserProfile = () => {
-    handleCloseUserMenu()
-  }
   const avatarSize = {
     width: 24,
     height: 24,
   }
   if (isLogin) {
+    const favor = songlistState.value?.create[0]
+    const favorListId = favor?.id
+    const handleGo2UserProfile = () => {
+      window.alert('API接口问题导致无法访问私有歌单')
+      handleCloseUserMenu()
+    }
     return (
       <div className={styles.box}>
         <IconButton onClick={handleOpenUserMenu}>

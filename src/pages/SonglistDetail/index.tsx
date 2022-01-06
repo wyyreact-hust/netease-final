@@ -12,30 +12,31 @@ import { PlayMusicDispatchContext, ACTIONS } from 'reducers/playMusic'
 import styles from './style.module.css'
 import { LogStateContext } from 'reducers/log'
 import listDetailApis from 'apis/songListDetail'
-
+import songApis from 'apis/song'
 import { getSonglistDetail } from 'graphql/music'
 import useAsyncFn from 'hooks/useAsyncFn'
 
 const { useEffect, useContext } = React
 
 const SonglistDetail = () => {
-  // const [infoState, getInfoState] = useAsyncFn(listDetailApis.getSonglistDetail);
-  // const [listState, getListState] = useAsyncFn(listDetailApis.getSongAllList);
-
-  // useEffect(()=>{
-  //   getInfoState({id: songlistId as any as number});
-  //   getListState({id: songlistId as any as number});
-  // })
-
-  // const info = infoState.value;
-  // const songs = listState.value?.playList;
-  // const loading = infoState.loading || listState.loading;
-
   const params = useParams<IDictionary<string>>()
   const { songlistId } = params
   const dispatch = useContext(PlayMusicDispatchContext)
   const loginState = useContext(LogStateContext)
   const { isLogined: isLogin, user } = loginState
+
+  // const [infoState, getInfoState] = useAsyncFn(listDetailApis.getSonglistDetail);
+  // const [songState, getSongState] = useAsyncFn(songApis.getSongDetail);
+  // const {loading} = infoState;
+  // useEffect(()=>{
+  //   if(!isLogin) return;
+  //   getInfoState({id: songlistId});
+  //   const {playlist} = infoState.value.data;
+  //   const songIds = playlist.trackIds.map((track) => track.id)
+  //   getSongState(songIds);
+  // })
+  // const {playlist} = infoState.value.data;
+  // const songs = songState?.value;
 
   const [getSonglistDetailGql, { loading, data }] = useLazyQuery(getSonglistDetail, {
     onError: (error) => {
@@ -53,7 +54,7 @@ const SonglistDetail = () => {
   }, [songlistId])
 
   const playAll = (autoPlay?: boolean) => {
-    const list = (songs as IMusic[]).map((item) => {
+    const list = songs.map((item) => {
       return createMusic({
         ...item,
         duration: item.duration / 1000,
@@ -93,7 +94,7 @@ const SonglistDetail = () => {
             </div>
 
             <div className={styles.content}>
-              <MusicList data={songs as any as IMusic[]} onPlayAll={playAll} />
+              <MusicList data={songs} onPlayAll={playAll} />
             </div>
           </>
         )}
