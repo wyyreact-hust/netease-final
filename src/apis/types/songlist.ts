@@ -38,3 +38,11 @@ export interface ISongAllList {
   ar: IArtist
   al: IAlbum
 }
+
+export interface IGetSongListInfoRequest {
+  id: number
+}
+
+export interface IGetSongAllListRequest extends IGetSongListInfoRequest {
+  limit?: number
+}

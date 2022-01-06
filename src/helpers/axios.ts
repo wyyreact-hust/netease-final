@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, ResponseType, AxiosInstance } from 'axios'
 import { SERVER } from 'constants/server'
 
-const TIMEOUT = 40000
+const TIMEOUT = 4000
 const MIME_TYPE: IDictionary<ResponseType> = {
   JSON: 'json',
 }
