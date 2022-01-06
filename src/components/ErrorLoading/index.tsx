@@ -8,7 +8,7 @@ export default function ErrorPage() {
         <img src={errorImg} />
       </div>
       <div className={styles.box2}>
-        <h1>请先登录后再查看歌单</h1>
+        <h1>由于网易云接口限制，必须先登录才能访问该页面</h1>
       </div>
     </div>
   )

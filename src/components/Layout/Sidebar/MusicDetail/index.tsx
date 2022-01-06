@@ -38,7 +38,10 @@ const MusicDetail = () => {
             <div className={styles.cdWrap}>
               <div className={styles.cd}>
                 <div className={styles.bar}>
-                  <img src={playBar} className={cn(styles.playBar, !isPlaying && styles.pause, isPlaying && styles.playing)} />
+                  <img
+                    src={playBar}
+                    className={cn(styles.playBar, !isPlaying && styles.pause, isPlaying && styles.playing)}
+                  />
                   <img src={playCd} className={styles.playCd} />
                 </div>
                 <div className={styles.circle}>
@@ -52,7 +55,7 @@ const MusicDetail = () => {
             <div className={styles.lyric}>
               <div className={styles.name}>{music?.name}</div>
               <div className={styles.artists}>
-                歌手：
+                歌手:
                 <span>{music?.artists.map(({ name }) => name).join(' / ')}</span>
               </div>
               <div className={styles.lrc}>

@@ -17,17 +17,6 @@ import { getSonglistDetail } from 'graphql/music'
 
 const { useEffect, useContext } = React
 
-const TABS = [
-  {
-    label: '歌曲列表',
-    key: 'songlist',
-  },
-  {
-    label: '评论',
-    key: 'comment',
-  },
-]
-
 const SonglistDetail = () => {
   const dispatch = useContext(PlayMusicDispatchContext)
   const params = useParams<IDictionary<string>>()
@@ -79,6 +68,7 @@ const SonglistDetail = () => {
   }
 
   if (!isLogin) {
+    //登录后才允许查看歌单
     return <ErrorPage />
   } else {
     return (
@@ -92,9 +82,6 @@ const SonglistDetail = () => {
             </div>
 
             <div className={styles.content}>
-              <div className={styles.tabs}>
-                <Tabs tabs={TABS} />
-              </div>
               <MusicList data={songs} onPlayAll={playAll} />
             </div>
           </>

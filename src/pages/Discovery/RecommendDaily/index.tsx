@@ -10,6 +10,7 @@ import { PlayMusicDispatchContext, ACTIONS } from 'reducers/playMusic'
 import { LogStateContext } from 'reducers/log'
 import { IMusic } from 'apis/types/business'
 import styles from './style.module.css'
+import ErrorPage from 'components/ErrorLoading'
 
 const { useEffect, useContext } = React
 
@@ -76,7 +77,7 @@ const RecommendDaily = () => {
           )}
         </div>
       ) : (
-        <div className={styles.needLogin}>请先登录喔~</div>
+        <ErrorPage />
       )}
     </div>
   )

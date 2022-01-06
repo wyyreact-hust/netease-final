@@ -15,6 +15,14 @@ const NAVBAR = {
       label: '歌单',
       route: ROUTES.SONG_LIST,
     },
+    {
+      label: '日推',
+      route: ROUTES.RECOMMEND_DAILY,
+    },
+    {
+      label: '最新音乐',
+      route: ROUTES.LATEST_MUSIC,
+    },
   ],
 }
 

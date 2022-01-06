@@ -1,4 +1,3 @@
-import Searcher from './Searcher'
 import React from 'react'
 import Banner from './Banner'
 import Songlist from './Songlist'
@@ -20,7 +19,6 @@ const Recommendation = () => {
       <div className={styles.block}>
         <LatestMusic />
       </div>
-
     </div>
   )
 }
