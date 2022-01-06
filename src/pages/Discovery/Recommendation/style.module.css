@@ -1,0 +1,21 @@
+.root {
+  padding: 10px 0;
+}
+
+.block {
+  margin-bottom: 50px;
+}
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+}
+
+.operations {
+  display: flex;
+  flex-direction: row;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
+}

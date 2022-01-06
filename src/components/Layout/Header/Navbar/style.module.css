@@ -1,0 +1,21 @@
+@value colors: '~styles/colors.module.css';
+@value grey, black from colors;
+
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  margin-right: 2em;
+  cursor: pointer;
+  color: rgb(172, 172, 172);
+
+  &:hover {
+    color: white;
+  }
+}
+
+.active {
+  color: white;
+}

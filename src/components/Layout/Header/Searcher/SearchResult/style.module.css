@@ -1,0 +1,10 @@
+.empty {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.back {
+  background-color: #F5F5F5;
+}
