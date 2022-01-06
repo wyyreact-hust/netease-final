@@ -18,42 +18,6 @@
   position: relative;
 }
 
-.iconsWrap {
-  display: flex;
-  position: absolute;
-  top: 10px;
-  left: 8px;
-
-  .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 14px;
-    height: 14px;
-    margin-right: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-
-    & svg {
-      display: none;
-    }
-  }
-
-  .circle:hover svg {
-    display: block;
-  }
-
-  .down {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    margin-left: 15px;
-    cursor: pointer;
-  }
-}
-
 .backForward {
   display: flex;
   position: absolute;
@@ -72,7 +36,7 @@
   }
 
   div:hover {
-    background-color: #e8e8e8;
+    background-color: rgba(232, 232, 232, 0.6);
   }
 }
 

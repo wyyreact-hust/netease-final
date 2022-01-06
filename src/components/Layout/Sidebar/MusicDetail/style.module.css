@@ -63,11 +63,21 @@
       width: 100px;
       height: auto;
       margin: 10px 0 0 8px;
+      transform: rotate(0);
+      transform-origin: 0px 0px;
+      transition: transform 500ms;
     }
 
     .pause {
       transform: rotate(-35deg);
-      transform-origin: 0 0;
+      transform-origin: 0px 0px;
+      transition: transform 500ms;
+    }
+
+    .playing {
+      transform: rotate(35deg);
+      transform-origin: 0px 0px;
+      transition: transform 500ms;
     }
 
     .playCd {
