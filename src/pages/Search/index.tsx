@@ -101,19 +101,6 @@ const Search = () => {
             {tab}
           </span>
         </div>
-        <div className={styles.tabs}>
-          {Object.keys(TABS).map((key) => {
-            return (
-              <div
-                key={key}
-                className={cn(styles.tab, activeTab === key && styles.active)}
-                onClick={() => handleTabClick(key)}
-              >
-                {TABS[key].tab}
-              </div>
-            )
-          })}
-        </div>
       </div>
 
       <div className={styles.content}>

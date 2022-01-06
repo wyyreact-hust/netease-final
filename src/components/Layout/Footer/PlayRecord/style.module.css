@@ -53,5 +53,6 @@
 .content {
   height: calc(100% - 69px);
   font-size: 0.9em;
-  overflow: scroll;
+  overflow: hidden;
+  scrollbar-width: 0;
 }

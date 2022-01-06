@@ -45,4 +45,6 @@
 .list {
   height: calc(100% - 27px);
   overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 0.1px;
 }
