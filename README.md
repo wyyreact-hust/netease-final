@@ -8,6 +8,8 @@ This project is a highly imitation of Netease Music Player based on React, TypeS
 - Typescript
 - Webpack
 
+Active Page: [Netease Music Player](https://netease-final.vercel.app/)
+
 ## Table of Contents
 
 - [Install](#Install)
