@@ -42,5 +42,4 @@ const PlayVolume = () => {
     </div>
   )
 }
-
 export default PlayVolume
