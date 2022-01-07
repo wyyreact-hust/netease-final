@@ -12,7 +12,7 @@
   /* 减去sidebar的宽度 */
   width: calc(100%);
 
-  /* 减去header和footer的高度 */
+  /*  减去header和footer的高度  */
   height: calc(100% - headerHeight - footerHeight);
   margin-top: headerHeight;
   margin-bottom: footerHeight;
