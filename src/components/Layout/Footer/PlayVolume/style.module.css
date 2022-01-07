@@ -9,8 +9,8 @@
 
 .progress {
   width: 130px;
-  margin-left: 3px;
-  border-bottom: 1px solid tipsColor;
+  margin-left: 8px;
+  padding-top: 2px;
   position: relative;
 }
 

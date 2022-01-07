@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '@blueprintjs/core'
-
+import { Slider } from '@mui/material'
 import ProgressBar from 'components/ProgressBar'
 import { AudioContext } from 'reducers/playMusic'
 import styles from './style.module.css'
@@ -23,11 +23,21 @@ const PlayVolume = () => {
     return Math.floor(volume * 100)
   }, [state?.volume])
 
+  const handleChange = (event: Event, newValue: number | number[]) => {
+    controls?.volume((newValue as number) / 100)
+  }
+
   return (
     <div className={styles.root}>
-      <Icon icon='volume-off' />
+      <Icon icon='volume-off' size={20} />
       <div className={styles.progress}>
-        <ProgressBar className={styles.bar} originDonePercent={originDonePercent} onBarClick={handleBarClick} />
+        <Slider
+          className={styles.bar}
+          defaultValue={originDonePercent}
+          onChange={handleChange}
+          size='small'
+          sx={{ color: '#ec4141' }}
+        />
       </div>
     </div>
   )
