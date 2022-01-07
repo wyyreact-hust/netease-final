@@ -13,7 +13,8 @@
 }
 
 .actions {
-  width: sidebarWidth;
+  width: 10%;
+  min-width: 80px;
   height: 100%;
   position: relative;
 }
@@ -44,14 +45,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - sidebarWidth);
+  width: 100%;
+  min-width: -webkit-fill-available;
   padding: 0 20px;
 }
 
 .operations {
   display: flex;
   align-items: center;
-  margin-right: 80px;
+  margin-right: 100px;
 
   .login {
     font-size: 14px;
