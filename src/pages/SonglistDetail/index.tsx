@@ -15,6 +15,7 @@ import listDetailApis from 'apis/songListDetail'
 import songApis from 'apis/song'
 import { getSonglistDetail } from 'graphql/music'
 import useAsyncFn from 'hooks/useAsyncFn'
+import request from 'helpers/axios'
 
 const { useEffect, useContext } = React
 
@@ -25,6 +26,7 @@ const SonglistDetail = () => {
   const loginState = useContext(LogStateContext)
   const { isLogined: isLogin, user } = loginState
 
+  // 不使用request的原因是一直timeout
   // const [infoState, getInfoState] = useAsyncFn(listDetailApis.getSonglistDetail);
   // const [songState, getSongState] = useAsyncFn(songApis.getSongDetail);
   // const {loading} = infoState;
