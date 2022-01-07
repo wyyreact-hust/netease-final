@@ -53,9 +53,11 @@ const UserMenu = () => {
     }
     return (
       <div className={styles.box}>
-        <IconButton onClick={handleOpenUserMenu}>
-          <Avatar alt='userAvatar' src={user.profile.avatarUrl} sx={avatarSize} />
-        </IconButton>
+        <Tooltip title='用户菜单'>
+          <IconButton onClick={handleOpenUserMenu}>
+            <Avatar alt='userAvatar' src={user.profile.avatarUrl} sx={avatarSize} />
+          </IconButton>
+        </Tooltip>
         <span className={styles.userName}>{user.profile.nickname}</span>
         <Menu
           sx={{ mt: '100px' }}

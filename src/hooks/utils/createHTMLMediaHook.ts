@@ -45,7 +45,7 @@ const createHTMLMediaHook = (tag: 'audio' | 'video') => {
       duration: 0,
       paused: true,
       muted: false,
-      volume: 1,
+      volume: 0.5,
     })
     const ref = useRef<HTMLAudioElement | null>(null)
 
