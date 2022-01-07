@@ -62,6 +62,7 @@ const LoginDialog: React.FC<IProps> = ({ handleClose = noop, open }) => {
           fullWidth
           variant='standard'
           onChange={handlePhoneChange}
+          color='warning'
         />
         <TextField
           margin='dense'
@@ -71,6 +72,7 @@ const LoginDialog: React.FC<IProps> = ({ handleClose = noop, open }) => {
           fullWidth
           variant='standard'
           onChange={handlePasswordChange}
+          color='warning'
         />
         {error && <div className='error'>{error.message}</div>}
       </DialogContent>
