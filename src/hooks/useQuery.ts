@@ -3,8 +3,6 @@ import { useLocation } from 'react-router-dom'
 const useQuery = () => {
   const { search } = useLocation()
   const result: IDictionary<string> = {}
-  console.log(result)
-  console.log(search)
   search
     .substr(1)
     .split('&')

@@ -15,7 +15,8 @@
 .content {
   .row {
     display: flex;
-    padding: 10px 0;
+    padding: 10px;
+    paddding-left: 10px;
   }
 
   .row:nth-child(2n + 1) {

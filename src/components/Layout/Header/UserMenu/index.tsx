@@ -48,7 +48,9 @@ const UserMenu = () => {
     const favor = songlistState.value?.create[0]
     const favorListId = favor?.id
     const handleGo2UserProfile = () => {
+      console.log(favorListId);
       window.alert('API接口问题导致无法访问私有歌单')
+      // history.push(`${ROUTES.SONG_LISTS}/${favorListId}`);
       handleCloseUserMenu()
     }
     return (

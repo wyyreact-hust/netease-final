@@ -62,7 +62,7 @@ function Table<RecordType extends Record<string, any> = any>({
           })}
         </div>
       ) : (
-        <div className={styles.empty}>暂无数据喔</div>
+        <div className={styles.empty}>暂无数据</div>
       )}
     </div>
   )
