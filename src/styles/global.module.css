@@ -5,7 +5,6 @@
 @value bodyMinWidth from constants;
 
 body {
-  min-width: bodyMinWidth;
   overflow: hidden;
 }
 

@@ -60,7 +60,7 @@ const UserMenu = () => {
         </Tooltip>
         <span className={styles.userName}>{user.profile.nickname}</span>
         <Menu
-          sx={{ mt: '100px' }}
+          sx={{ mt: '35px' }}
           id='user-menu'
           anchorEl={anchorElUser}
           anchorOrigin={{
